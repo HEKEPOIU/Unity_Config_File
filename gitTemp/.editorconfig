@@ -1,0 +1,144 @@
+
+[*]
+charset = utf-8-bom
+end_of_line = crlf
+trim_trailing_whitespace = false
+insert_final_newline = false
+indent_style = space
+indent_size = 4
+
+# Microsoft .NET properties
+csharp_new_line_before_members_in_object_initializers = false
+csharp_preferred_modifier_order = public, private, protected, internal, file, new, static, abstract, virtual, sealed, readonly, override, extern, unsafe, volatile, async, required:suggestion
+csharp_style_prefer_utf8_string_literals = true:suggestion
+csharp_style_var_for_built_in_types = false:suggestion
+
+# 這裡規定了Constant必須全字母大寫
+dotnet_naming_rule.private_constants_rule.import_to_resharper = as_predefined
+dotnet_naming_rule.private_constants_rule.severity = warning
+dotnet_naming_rule.private_constants_rule.symbols = constants
+dotnet_naming_rule.private_constants_rule.style = constant_style
+dotnet_naming_symbols.constants.required_modifiers = const
+dotnet_naming_symbols.constants.applicable_kinds = field, local
+dotnet_naming_style.constant_style.capitalization = all_upper
+
+# 這裡規定了Method必須是PascalCase
+dotnet_naming_rule.Methods_should_be_pascal_case.severity = warning
+dotnet_naming_rule.Methods_should_be_pascal_case.symbols = methods
+dotnet_naming_rule.Methods_should_be_pascal_case.style = pascal_case_style
+dotnet_naming_symbols.methods.applicable_kinds = method
+
+# 這裡規定了Property必須是PascalCase
+dotnet_naming_rule.public_fields_should_be_pascal_case.severity = warning
+dotnet_naming_rule.public_fields_should_be_pascal_case.symbols = public_fields
+dotnet_naming_rule.public_fields_should_be_pascal_case.style = pascal_case_style
+dotnet_naming_symbols.public_fields.applicable_accessibilities = public
+dotnet_naming_symbols.public_fields.applicable_kinds = field
+
+dotnet_naming_style.pascal_case_style.capitalization = pascal_case
+
+# 這裡規定了函式參數必須是camelCase
+dotnet_naming_rule.parameters_should_be_camel_case.severity = warning
+dotnet_naming_rule.parameters_should_be_camel_case.symbols = parameters
+dotnet_naming_rule.parameters_should_be_camel_case.style = parameter_style
+dotnet_naming_symbols.parameters.applicable_kinds = parameter
+dotnet_naming_style.parameter_style.capitalization = camel_case
+
+# 這裡規定了Private的東西都必須是_camelCase
+dotnet_naming_rule.private_local_fields_should_be_camel_case.import_to_resharper = as_predefined
+dotnet_naming_rule.private_local_fields_should_be_camel_case.severity = warning
+dotnet_naming_rule.private_local_fields_should_be_camel_case.style = lower_camel_case_style
+dotnet_naming_rule.private_local_fields_should_be_camel_case.symbols = private_instance_fields_symbols
+dotnet_naming_symbols.private_instance_fields_symbols.applicable_accessibilities = private
+dotnet_naming_symbols.private_instance_fields_symbols.applicable_kinds = field, local
+dotnet_naming_style.lower_camel_case_style.capitalization = camel_case
+dotnet_naming_style.lower_camel_case_style.required_prefix = _
+
+dotnet_naming_rule.private_static_readonly_rule.import_to_resharper = as_predefined
+dotnet_naming_rule.private_static_readonly_rule.severity = warning
+dotnet_naming_rule.private_static_readonly_rule.style = upper_camel_case_style
+dotnet_naming_rule.private_static_readonly_rule.symbols = private_static_readonly_symbols
+dotnet_naming_symbols.private_static_readonly_symbols.applicable_accessibilities = private
+dotnet_naming_symbols.private_static_readonly_symbols.applicable_kinds = field
+dotnet_naming_symbols.private_static_readonly_symbols.required_modifiers = static,readonly
+dotnet_naming_style.upper_camel_case_style.capitalization = camel_case
+
+
+# 這裡規定了類別必須是PascalCase
+dotnet_naming_rule.classes_should_be_pascal_case.severity = warning
+dotnet_naming_rule.classes_should_be_pascal_case.symbols = classes
+dotnet_naming_rule.classes_should_be_pascal_case.style = class_style
+dotnet_naming_symbols.classes.applicable_kinds = class
+dotnet_naming_style.class_style.capitalization = pascal_case
+
+# 這裡規定了Interface必須是I開頭的PascalCase
+dotnet_naming_rule.interface_should_be_begins_with_i.severity = warning
+dotnet_naming_rule.interface_should_be_begins_with_i.symbols = interface
+dotnet_naming_rule.interface_should_be_begins_with_i.style = interface_style
+dotnet_naming_symbols.interface.applicable_kinds = interface
+dotnet_naming_style.interface_style.capitalization = pascal_case
+dotnet_naming_style.interface_style.required_prefix = I
+
+
+
+
+dotnet_style_parentheses_in_arithmetic_binary_operators = never_if_unnecessary:none
+dotnet_style_parentheses_in_other_binary_operators = always_for_clarity:none
+dotnet_style_parentheses_in_relational_binary_operators = never_if_unnecessary:none
+dotnet_style_predefined_type_for_locals_parameters_members = true:suggestion
+dotnet_style_predefined_type_for_member_access = true:suggestion
+dotnet_style_qualification_for_event = false:suggestion
+dotnet_style_qualification_for_field = false:suggestion
+dotnet_style_qualification_for_method = false:suggestion
+dotnet_style_qualification_for_property = false:suggestion
+dotnet_style_require_accessibility_modifiers = for_non_interface_members:warning
+
+
+
+
+# ReSharper properties
+resharper_autodetect_indent_settings = true
+resharper_formatter_off_tag = @formatter:off
+resharper_formatter_on_tag = @formatter:on
+resharper_formatter_tags_enabled = true
+resharper_for_simple_types = use_explicit_type
+resharper_indent_preprocessor_directives = normal
+resharper_use_indent_from_vs = false
+
+# ReSharper inspection severities
+resharper_arrange_redundant_parentheses_highlighting = hint
+resharper_arrange_this_qualifier_highlighting = hint
+resharper_arrange_type_member_modifiers_highlighting = hint
+resharper_arrange_type_modifiers_highlighting = hint
+resharper_built_in_type_reference_style_for_member_access_highlighting = hint
+resharper_built_in_type_reference_style_highlighting = hint
+resharper_redundant_base_qualifier_highlighting = warning
+resharper_suggest_var_or_type_built_in_types_highlighting = hint
+resharper_web_config_module_not_resolved_highlighting = warning
+resharper_web_config_type_not_resolved_highlighting = warning
+resharper_web_config_wrong_module_highlighting = warning
+
+[{*.har,*.jsb2,*.jsb3,*.json,*.jsonc,*.postman_collection,*.postman_collection.json,*.postman_environment,*.postman_environment.json,.babelrc,.eslintrc,.prettierrc,.stylelintrc,bowerrc,jest.config}]
+indent_style = space
+indent_size = 2
+
+[{*.yaml,*.yml}]
+indent_style = space
+indent_size = 2
+
+[{*.bash,*.sh,*.zsh}]
+indent_style = space
+indent_size = 2
+
+[*.asmdef]
+indent_style = space
+indent_size = 2
+
+[*.asmref]
+indent_style = space
+indent_size = 2
+
+[*.{appxmanifest,asax,ascx,aspx,axaml,build,c,c++,c++m,cc,ccm,cginc,compute,cp,cpp,cppm,cs,cshtml,cu,cuh,cxx,cxxm,dtd,fs,fsi,fsscript,fsx,fx,fxh,h,hh,hlsl,hlsli,hlslinc,hpp,hxx,inc,inl,ino,ipp,ixx,master,ml,mli,mpp,mq4,mq5,mqh,mxx,nuspec,paml,razor,resw,resx,shader,skin,tpp,usf,ush,uxml,vb,xaml,xamlx,xoml,xsd}]
+indent_style = space
+indent_size = 4
+tab_width = 4
